@@ -3,3 +3,8 @@ function test() {
 }
 
 const teste = () => console.log('This file is just a test');
+
+test;
+teste;
+
+# New file
