@@ -15,4 +15,5 @@ end
 	Change each letter of the string to one 5 in advance.
 
 	It also change the spaces.
+	doesn't wrap.
 =end
