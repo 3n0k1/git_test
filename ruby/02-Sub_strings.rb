@@ -6,15 +6,20 @@ yourText = gets.chomp
 =end
 
 def substrings(text, dictionary)
+	result = Hash.new
 	textArray = text.downcase.split(' ')
 	textArray.each do |word|
 		dictionary.each do |test|
 			if word == test
-				puts word
+				if result.has_key?(word)
+					result[word] += 1
+				else
+					result[word] = 1
+				end
 			end
 		end
 	end
-
+	print result
 end
 
-substrings("Howdy partner sit", dictionary)
+substrings("Howdy partner sit down partner", dictionary)
