@@ -25,10 +25,20 @@ class TicTacToe
 		@board[position_in_board] = "O"
 	end
 
+	def match()
+		board()
+		playX()
+		4.times do
+			board()
+			playO()
+			board()
+			playX()
+			board()
+		end
+	end
+
 
 end
 
 game = TicTacToe.new()
-game.board()
-game.playX()
-game.board()
+game.match()
