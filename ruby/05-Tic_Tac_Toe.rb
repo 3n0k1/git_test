@@ -13,7 +13,17 @@ class TicTacToe
 		puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 	end
 
+	def playX()
+		puts "Chose your position(1-9): "
+		position = gets.chomp.to_i
+		position_in_board = (position - 1)
+		@board[position_in_board] = "X"
+	end
+
+
 end
 
 game = TicTacToe.new()
+game.board()
+game.playX()
 game.board()
