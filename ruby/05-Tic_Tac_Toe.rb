@@ -3,8 +3,6 @@ class TicTacToe
 		@board = [1,2,3,4,5,6,7,8,9]
 	end
 
-	
-
 	def board()
 		puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
 		puts "---+---+---"
@@ -18,6 +16,13 @@ class TicTacToe
 		position = gets.chomp.to_i
 		position_in_board = (position - 1)
 		@board[position_in_board] = "X"
+	end
+
+	def playO()
+		puts "Chose your position(1-9): "
+		position = gets.chomp.to_i
+		position_in_board = (position - 1)
+		@board[position_in_board] = "O"
 	end
 
 
