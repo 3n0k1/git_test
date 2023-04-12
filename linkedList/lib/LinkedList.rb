@@ -41,7 +41,7 @@ class LinkedList
 
 
 	def head #returns the first node in the list
-		return @head.value
+		return @head
 	end
 	
 	def tail #returns the last node in the list
@@ -51,7 +51,7 @@ class LinkedList
 			current_node = current_node.next_node
 		end
 
-		return current_node.value
+		return current_node
 	end
 
 	def at(index) #returns the node at the given index
@@ -62,10 +62,12 @@ class LinkedList
 			node += 1
 		end
 
-		return current_node.value
+		return current_node
 	end
 
 	def pop #removes the last element from the list
+		second_last = at(size - 2)
+		second_last.next_node = nil
 	end
 
 	def contains?(value) #returns true if the passed in value is in the list and otherwise returns false.
