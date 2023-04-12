@@ -8,16 +8,16 @@ class LinkedList
 
 	def append(value) #adds a new node containing value to the end of the list
 		new_node = Node.new(value)
-
-    if @head.next_node.nil?
-      @head = new_node
-    else
-      current_node = @head
-      unless current_node.next_node.nil?
-        current_node = current_node.next_node
-      end
-      current_node.next_node = new_node
-    end
+	
+		if @head.next_node.nil?
+			@head.next_node = new_node
+		else
+			current_node = @head
+			while !current_node.next_node.nil?
+				current_node = current_node.next_node
+			end
+			current_node.next_node = new_node
+		end
 	end
 
 	def prepend(value) #adds a new node containing value to the start of the list
@@ -53,5 +53,16 @@ class LinkedList
 	def find(value) #returns the index of the node containing value, or nil if not found.
 	end
 	def to_s #represent your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> nil
+	end
+
+
+
+	def display
+		current_node = @head
+		while current_node.next_node != nil
+			print "#{current_node.value} -> "
+			current_node = current_node.next_node
+		end
+		puts "#{current_node.value} -> nil"
 	end
 end
