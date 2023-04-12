@@ -14,3 +14,4 @@ list.prepend(0)
 list.display
 
 p list.head
+p list.tail

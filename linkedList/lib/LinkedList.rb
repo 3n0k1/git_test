@@ -45,6 +45,13 @@ class LinkedList
 	end
 	
 	def tail #returns the last node in the list
+		current_node = @head
+
+		until current_node.next_node.nil?
+			current_node = current_node.next_node
+		end
+
+		return current_node.value
 	end
 	def at(index) #returns the node at the given index
 	end
@@ -65,6 +72,6 @@ class LinkedList
 			print "#{current_node.value} -> "
 			current_node = current_node.next_node
 		end
-		puts "#{current_node.value} -> nil"
+		puts "#{current_node.value}"
 	end
 end
