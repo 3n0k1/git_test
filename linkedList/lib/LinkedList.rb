@@ -53,14 +53,27 @@ class LinkedList
 
 		return current_node.value
 	end
+
 	def at(index) #returns the node at the given index
+		current_node = @head
+
+		for node in 0...index
+			current_node = current_node.next_node
+			node += 1
+		end
+
+		return current_node.value
 	end
+
 	def pop #removes the last element from the list
 	end
+
 	def contains?(value) #returns true if the passed in value is in the list and otherwise returns false.
 	end
+
 	def find(value) #returns the index of the node containing value, or nil if not found.
 	end
+
 	def to_s #represent your LinkedList objects as strings, so you can print them out and preview them in the console. The format should be: ( value ) -> ( value ) -> ( value ) -> nil
 	end
 
