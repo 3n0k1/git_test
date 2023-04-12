@@ -2,7 +2,7 @@ require_relative 'Node'
 
 class LinkedList
 	def initialize
-		@head = Node.new
+		@head = Node.new("I am head")
 		@tail
 	end
 
@@ -41,7 +41,9 @@ class LinkedList
 
 
 	def head #returns the first node in the list
+		return @head.value
 	end
+	
 	def tail #returns the last node in the list
 	end
 	def at(index) #returns the node at the given index
