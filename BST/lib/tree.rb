@@ -11,11 +11,11 @@ class Tree
 		arr = arr.sort.uniq
 		p arr.inspect
 
-		if arr.lenght % 2 = 0
+		if arr.length % 2 == 0
 			p 'even'
 		else
 			p 'odd'
 		end
-		
+
 	end
 end
